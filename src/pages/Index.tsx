@@ -8,6 +8,8 @@ import FeatureGrid from "@/components/FeatureGrid";
 import CourseHighlights from "@/components/CourseHighlights";
 import TargetAudience from "@/components/TargetAudience";
 import TestimonialGrid from "@/components/TestimonialGrid";
+import AsSeenIn from "@/components/AsSeenIn";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -22,10 +24,10 @@ const Index = () => {
         </div>
         
         <div className="flex space-x-4">
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">
             Enroll Now
           </Button>
-          <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-2 rounded-full">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">
             Login
           </Button>
         </div>
@@ -33,24 +35,24 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="px-6 py-16 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
           <span className="text-white">ग्रामीण भागातील लोकांसाठी</span><br />
           <span className="text-orange-500">इंग्रजी बोलायला शिकवणारा एकमेव कोर्स</span>
-        </h1>
+        </h2>
         
-        <h2 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+        <h3 className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
           इंग्रजीची भीती घालवा ! आत्मविश्वास वाढवा !<br />
           अभ्यास म्हणून नव्हे तर भाषा म्हणून बोलायला शिका
-        </h2>
+        </h3>
 
         {/* 5 Star Reviews Badge */}
-        <div className="inline-flex items-center space-x-2 bg-gray-900 border border-orange-500 px-6 py-3 rounded-full mb-12">
+        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-12">
+          <span className="text-yellow-400 font-medium">५ स्टार Reviews</span>
           <div className="flex space-x-1">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-orange-500 text-orange-500" />
+              <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
-          <span className="text-white font-medium">५ स्टार Reviews</span>
         </div>
       </section>
 
@@ -58,12 +60,14 @@ const Index = () => {
       <section className="px-6 py-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Left Side - Features */}
-            <FeatureGrid />
+            {/* Mobile: Video First, Desktop: Features First */}
+            <div className="md:order-1 order-2">
+              <FeatureGrid />
+            </div>
             
-            {/* Right Side - Video */}
-            <div className="flex flex-col items-center justify-between rounded-lg">
-              <div className="w-full p-4 bg-gray-900 shadow-md rounded-xl mb-4">
+            {/* Mobile: Features Second, Desktop: Video Second */}
+            <div className="md:order-2 order-1 flex flex-col items-center justify-between rounded-lg">
+              <div className="w-full p-4 bg-[#222] shadow-md rounded-xl mb-4">
                 <div className="relative bg-gray-800 rounded-lg overflow-hidden aspect-video">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-orange-500 rounded-full p-4">
@@ -82,12 +86,15 @@ const Index = () => {
               </h3>
               
               <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full py-6 rounded-2xl text-xl font-medium">
-                Reserve Seat for Rs 1,899 <span className="line-through text-sm ml-2">Rs 20,000</span>
+                Reserve Seat for ₹999 <span className="line-through text-sm ml-2">₹2500</span>
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* As Seen In Section */}
+      <AsSeenIn />
 
       {/* Target Audience Section */}
       <TargetAudience />
@@ -118,6 +125,9 @@ const Index = () => {
           </Button>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

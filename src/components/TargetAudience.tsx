@@ -20,7 +20,7 @@ const TargetAudience = () => {
         
         <div className="grid md:grid-cols-5 grid-cols-2 gap-6">
           {audiences.map((audience, index) => (
-            <div key={index} className="bg-black rounded-xl p-6 text-center hover:bg-gray-800 transition-colors">
+            <div key={index} className="bg-[#222] rounded-xl p-6 text-center hover:bg-gray-800 transition-colors">
               <audience.icon className="w-12 h-12 text-orange-500 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">{audience.title}</h3>
               <p className="text-gray-400 text-sm">{audience.description}</p>

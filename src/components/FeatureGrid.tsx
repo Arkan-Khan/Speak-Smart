@@ -10,7 +10,7 @@ const FeatureGrid = () => {
   ];
 
   return (
-    <div className="bg-gray-900 rounded-2xl overflow-hidden p-6">
+    <div className="bg-[#222] rounded-2xl overflow-hidden p-6">
       <div className="grid grid-cols-2 gap-4 mb-6">
         {features.map((feature, index) => (
           <div key={index} className="bg-white text-black rounded-xl flex p-3 h-full items-center">

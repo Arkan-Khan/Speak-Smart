@@ -30,17 +30,17 @@ const CountdownTimer = () => {
     <div className="text-center mb-8">
       <p className="text-xl text-gray-300 mb-4">Offer ends in</p>
       <div className="flex justify-center space-x-4">
-        <div className="bg-orange-500 rounded-lg p-4 min-w-[80px]">
-          <div className="text-3xl font-bold text-white">{String(timeLeft.hours).padStart(2, '0')}</div>
-          <div className="text-sm text-orange-100">Hours</div>
+        <div className="bg-orange-500 rounded-lg p-6 min-w-[100px] h-[250px] flex flex-col items-center justify-center">
+          <div className="text-4xl md:text-5xl font-bold text-white">{String(timeLeft.hours).padStart(2, '0')}</div>
+          <div className="text-sm text-orange-100 mt-2">Hours</div>
         </div>
-        <div className="bg-orange-500 rounded-lg p-4 min-w-[80px]">
-          <div className="text-3xl font-bold text-white">{String(timeLeft.minutes).padStart(2, '0')}</div>
-          <div className="text-sm text-orange-100">Minutes</div>
+        <div className="bg-orange-500 rounded-lg p-6 min-w-[100px] h-[250px] flex flex-col items-center justify-center">
+          <div className="text-4xl md:text-5xl font-bold text-white">{String(timeLeft.minutes).padStart(2, '0')}</div>
+          <div className="text-sm text-orange-100 mt-2">Minutes</div>
         </div>
-        <div className="bg-orange-500 rounded-lg p-4 min-w-[80px]">
-          <div className="text-3xl font-bold text-white">{String(timeLeft.seconds).padStart(2, '0')}</div>
-          <div className="text-sm text-orange-100">Seconds</div>
+        <div className="bg-orange-500 rounded-lg p-6 min-w-[100px] h-[250px] flex flex-col items-center justify-center">
+          <div className="text-4xl md:text-5xl font-bold text-white">{String(timeLeft.seconds).padStart(2, '0')}</div>
+          <div className="text-sm text-orange-100 mt-2">Seconds</div>
         </div>
       </div>
     </div>

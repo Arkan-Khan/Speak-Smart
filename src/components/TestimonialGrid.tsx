@@ -41,10 +41,10 @@ const TestimonialGrid = () => {
   ];
 
   return (
-    <section className="px-6 py-16 bg-gray-900">
+    <section className="px-6 py-16 bg-[#e3eaec]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          <span className="text-white">विद्यार्थ्यांचे </span>
+          <span className="text-black">विद्यार्थ्यांचे </span>
           <span className="text-orange-500">फीडबॅक</span>
         </h2>
         
@@ -52,18 +52,18 @@ const TestimonialGrid = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className={`bg-black rounded-xl p-6 hover:bg-gray-800 transition-colors ${
+              className={`bg-white rounded-xl p-6 hover:shadow-lg transition-shadow ${
                 testimonial.size === 'large' ? 'md:col-span-2' : 
                 testimonial.size === 'medium' ? 'md:col-span-1' : 'md:col-span-1'
               }`}
             >
               <Quote className="w-8 h-8 text-orange-500 mb-4" />
-              <p className="text-gray-300 mb-4 leading-relaxed">{testimonial.content}</p>
+              <p className="text-gray-700 mb-4 leading-relaxed">{testimonial.content}</p>
               
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                  <p className="text-orange-400 text-sm">{testimonial.role}</p>
+                  <h4 className="text-black font-semibold">{testimonial.name}</h4>
+                  <p className="text-orange-500 text-sm">{testimonial.role}</p>
                 </div>
                 <div className="flex space-x-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
