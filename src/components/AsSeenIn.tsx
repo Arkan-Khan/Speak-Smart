@@ -17,10 +17,10 @@ const AsSeenIn = () => {
           <span className="text-orange-500">seen in</span>
         </h2>
         
-        {/* Bento Grid Layout */}
-        <div className="grid grid-cols-6 grid-rows-2 gap-4 h-64">
-          {/* Large item - spans 2x2 */}
-          <div className="col-span-2 row-span-2 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
+        {/* Enhanced Bento Grid Layout with 6 different sized items */}
+        <div className="grid grid-cols-12 grid-rows-4 gap-4 h-80">
+          {/* Large item - spans 4x2 */}
+          <div className="col-span-4 row-span-2 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
             <img 
               src={mediaLogos[0].placeholder} 
               alt={mediaLogos[0].name}
@@ -28,8 +28,8 @@ const AsSeenIn = () => {
             />
           </div>
           
-          {/* Medium items - span 2x1 each */}
-          <div className="col-span-2 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
+          {/* Medium item - spans 3x2 */}
+          <div className="col-span-3 row-span-2 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
             <img 
               src={mediaLogos[1].placeholder} 
               alt={mediaLogos[1].name}
@@ -37,7 +37,8 @@ const AsSeenIn = () => {
             />
           </div>
           
-          <div className="col-span-2 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
+          {/* Tall item - spans 2x3 */}
+          <div className="col-span-2 row-span-3 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
             <img 
               src={mediaLogos[2].placeholder} 
               alt={mediaLogos[2].name}
@@ -45,8 +46,8 @@ const AsSeenIn = () => {
             />
           </div>
           
-          {/* Small items - span 1x1 each */}
-          <div className="bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
+          {/* Wide item - spans 3x1 */}
+          <div className="col-span-3 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
             <img 
               src={mediaLogos[3].placeholder} 
               alt={mediaLogos[3].name}
@@ -54,7 +55,8 @@ const AsSeenIn = () => {
             />
           </div>
           
-          <div className="bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
+          {/* Small square - spans 2x2 */}
+          <div className="col-span-2 row-span-2 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
             <img 
               src={mediaLogos[4].placeholder} 
               alt={mediaLogos[4].name}
@@ -62,18 +64,11 @@ const AsSeenIn = () => {
             />
           </div>
           
-          <div className="bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
+          {/* Medium wide - spans 5x1 */}
+          <div className="col-span-5 bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
             <img 
               src={mediaLogos[5].placeholder} 
               alt={mediaLogos[5].name}
-              className="max-w-full h-auto opacity-70 hover:opacity-100 transition-opacity"
-            />
-          </div>
-          
-          <div className="bg-[#222] rounded-xl p-4 flex items-center justify-center hover:bg-gray-800 transition-colors">
-            <img 
-              src="https://dummyimage.com/120x60/cccccc/969696?text=Media+7" 
-              alt="Media 7"
               className="max-w-full h-auto opacity-70 hover:opacity-100 transition-opacity"
             />
           </div>

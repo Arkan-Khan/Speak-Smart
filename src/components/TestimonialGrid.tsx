@@ -7,36 +7,37 @@ const TestimonialGrid = () => {
       name: "राहुल शर्मा",
       role: "Student",
       content: "या कोर्समुळे माझा आत्मविश्वास खूप वाढला आहे. आता मी इंग्रजीत freely बोलू शकतो.",
-      rating: 5,
-      size: "large"
+      rating: 5
     },
     {
       name: "प्रिया पाटील",
       role: "Teacher",
       content: "अलीना मॅडमचा teaching style खूप सोपा आणि effective आहे.",
-      rating: 5,
-      size: "medium"
+      rating: 5
     },
     {
       name: "अमित कुमार",
       role: "Working Professional",
       content: "Office मध्ये presentation देताना आता confident feel होतो.",
-      rating: 5,
-      size: "medium"
+      rating: 5
     },
     {
       name: "सुनीता देवी",
       role: "Housewife",
       content: "मुलांना help करताना आता English मध्ये guidance देऊ शकते.",
-      rating: 5,
-      size: "large"
+      rating: 5
     },
     {
       name: "विकास जाधव",
       role: "Business Owner",
       content: "Business meetings मध्ये fluently communicate करू शकतो.",
-      rating: 5,
-      size: "small"
+      rating: 5
+    },
+    {
+      name: "पूजा मेहता",
+      role: "Student",
+      content: "Course पूर्ण केल्यानंतर माझे English speaking skills बरेच सुधारले आहेत.",
+      rating: 5
     }
   ];
 
@@ -48,14 +49,12 @@ const TestimonialGrid = () => {
           <span className="text-orange-500">फीडबॅक</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className={`bg-white rounded-xl p-6 hover:shadow-lg transition-shadow ${
-                testimonial.size === 'large' ? 'md:col-span-2' : 
-                testimonial.size === 'medium' ? 'md:col-span-1' : 'md:col-span-1'
-              }`}
+              className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow"
             >
               <Quote className="w-8 h-8 text-orange-500 mb-4" />
               <p className="text-gray-700 mb-4 leading-relaxed">{testimonial.content}</p>

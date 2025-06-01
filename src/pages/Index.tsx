@@ -16,37 +16,40 @@ const Index = () => {
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
       <header className="flex items-center justify-between p-6 border-b border-gray-800">
-        <div className="flex items-center space-x-2">
-          <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-lg">SS</span>
+        <div className="flex items-center">
+          <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
+            <img 
+              src="/lovable-uploads/8169f376-7ae0-4490-a86c-2c09c3a37911.png" 
+              alt="Speak Smart Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
-          <span className="text-xl font-semibold text-white">Speak Smart</span>
         </div>
         
-        <div className="flex space-x-4">
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">
+        <div className="flex space-x-2 md:space-x-4">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base">
             Enroll Now
           </Button>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base">
             Login
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="px-6 py-16 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight px-4">
-          <span className="text-white">ग्रामीण भागातील लोकांसाठी</span><br />
+      <section className="px-6 py-8 text-center">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight px-4">
+          <span className="text-white block mb-3">ग्रामीण भागातील लोकांसाठी</span>
           <span className="text-orange-500">इंग्रजी बोलायला शिकवणारा एकमेव कोर्स</span>
         </h2>
         
-        <h3 className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+        <h3 className="text-base md:text-lg text-gray-300 mb-6 max-w-4xl mx-auto">
           इंग्रजीची भीती घालवा ! आत्मविश्वास वाढवा !<br />
           अभ्यास म्हणून नव्हे तर भाषा म्हणून बोलायला शिका
         </h3>
 
         {/* 5 Star Reviews Badge */}
-        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-12">
+        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-8">
           <span className="text-white font-medium">५ स्टार Reviews</span>
           <div className="flex space-x-1">
             {[...Array(5)].map((_, i) => (
@@ -57,7 +60,7 @@ const Index = () => {
       </section>
 
       {/* Main Content Section */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Mobile: Video First, Desktop: Features First */}
