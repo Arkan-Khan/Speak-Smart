@@ -35,7 +35,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="px-6 py-16 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight px-4">
           <span className="text-white">ग्रामीण भागातील लोकांसाठी</span><br />
           <span className="text-orange-500">इंग्रजी बोलायला शिकवणारा एकमेव कोर्स</span>
         </h2>
@@ -47,7 +47,7 @@ const Index = () => {
 
         {/* 5 Star Reviews Badge */}
         <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-12">
-          <span className="text-yellow-400 font-medium">५ स्टार Reviews</span>
+          <span className="text-white font-medium">५ स्टार Reviews</span>
           <div className="flex space-x-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />

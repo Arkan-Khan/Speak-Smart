@@ -10,7 +10,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#e3eaec] py-12">
+    <footer className="bg-[#222] py-12">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
           {/* Logo */}
@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">SS</span>
             </div>
-            <span className="text-xl font-semibold text-black">Speak Smart</span>
+            <span className="text-xl font-semibold text-white">Speak Smart</span>
           </div>
 
           {/* Social Media Icons */}
@@ -37,10 +37,10 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="flex items-center space-x-2">
-            <Mail className="w-5 h-5 text-gray-600" />
+            <Mail className="w-5 h-5 text-gray-300" />
             <a 
               href="mailto:contact@speaksmart.com" 
-              className="text-blue-500 hover:text-blue-600 transition-colors"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
             >
               contact@speaksmart.com
             </a>
@@ -48,8 +48,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-6 border-t border-gray-300 text-center">
-          <p className="text-gray-600 text-sm">
+        <div className="mt-8 pt-6 border-t border-gray-600 text-center">
+          <p className="text-gray-400 text-sm">
             © 2025 Speak Smart. All rights reserved.
           </p>
         </div>

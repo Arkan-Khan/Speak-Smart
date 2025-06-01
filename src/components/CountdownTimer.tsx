@@ -29,18 +29,18 @@ const CountdownTimer = () => {
   return (
     <div className="text-center mb-8">
       <p className="text-xl text-gray-300 mb-4">Offer ends in</p>
-      <div className="flex justify-center space-x-4">
-        <div className="bg-orange-500 rounded-lg p-6 min-w-[100px] h-[250px] flex flex-col items-center justify-center">
-          <div className="text-4xl md:text-5xl font-bold text-white">{String(timeLeft.hours).padStart(2, '0')}</div>
-          <div className="text-sm text-orange-100 mt-2">Hours</div>
+      <div className="flex justify-center space-x-3">
+        <div className="bg-orange-500 rounded-lg p-4 w-20 h-24 flex flex-col items-center justify-center">
+          <div className="text-2xl font-bold text-white">{String(timeLeft.hours).padStart(2, '0')}</div>
+          <div className="text-xs text-orange-100 mt-1">Hours</div>
         </div>
-        <div className="bg-orange-500 rounded-lg p-6 min-w-[100px] h-[250px] flex flex-col items-center justify-center">
-          <div className="text-4xl md:text-5xl font-bold text-white">{String(timeLeft.minutes).padStart(2, '0')}</div>
-          <div className="text-sm text-orange-100 mt-2">Minutes</div>
+        <div className="bg-orange-500 rounded-lg p-4 w-20 h-24 flex flex-col items-center justify-center">
+          <div className="text-2xl font-bold text-white">{String(timeLeft.minutes).padStart(2, '0')}</div>
+          <div className="text-xs text-orange-100 mt-1">Minutes</div>
         </div>
-        <div className="bg-orange-500 rounded-lg p-6 min-w-[100px] h-[250px] flex flex-col items-center justify-center">
-          <div className="text-4xl md:text-5xl font-bold text-white">{String(timeLeft.seconds).padStart(2, '0')}</div>
-          <div className="text-sm text-orange-100 mt-2">Seconds</div>
+        <div className="bg-orange-500 rounded-lg p-4 w-20 h-24 flex flex-col items-center justify-center">
+          <div className="text-2xl font-bold text-white">{String(timeLeft.seconds).padStart(2, '0')}</div>
+          <div className="text-xs text-orange-100 mt-1">Seconds</div>
         </div>
       </div>
     </div>
