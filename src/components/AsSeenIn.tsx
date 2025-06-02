@@ -3,11 +3,13 @@ const AsSeenIn = () => {
   return (
     <section className="px-6 py-16 bg-black">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-orange-500 inline-block px-8 py-4 rounded-t-3xl mb-0">
-          <h2 className="text-2xl md:text-3xl font-bold text-center">
-            <span className="text-white">As </span>
-            <span className="text-white">seen in</span>
-          </h2>
+        <div className="flex justify-center mb-0">
+          <div className="bg-orange-500 inline-block px-8 py-4 rounded-t-3xl">
+            <h3 className="text-2xl md:text-3xl font-bold text-center">
+              <span className="text-white">As </span>
+              <span className="text-white">seen in</span>
+            </h3>
+          </div>
         </div>
         
         {/* Stacked Images Layout */}
