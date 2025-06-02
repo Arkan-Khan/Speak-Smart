@@ -38,8 +38,8 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="px-6 py-8 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight px-4 py-2">
-          <span className="text-white block mb-3">ग्रामीण भागातील लोकांसाठी</span>
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight px-4 py-6">
+          <span className="text-white block mb-6">ग्रामीण भागातील लोकांसाठी</span>
           <span className="text-orange-500">इंग्रजी बोलायला शिकवणारा एकमेव कोर्स</span>
         </h2>
         
@@ -59,17 +59,17 @@ const Index = () => {
         </div>
 
         {/* Banner Image */}
-        <div className="w-full max-w-4xl mx-auto mb-8">
+        <div className="w-full max-w-4xl mx-auto mt-6 mb-4">
           <img 
             src="/lovable-uploads/51ba5420-dd25-49a5-b14e-2b9aa49241e6.png" 
             alt="Speak Smart Banner" 
-            className="w-full h-auto rounded-xl"
+            className="w-full h-auto rounded-xl object-cover"
           />
         </div>
       </section>
 
       {/* Main Content Section */}
-      <section className="px-6 py-8">
+      <section className="px-6 py-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Mobile: Video First, Desktop: Features First */}
@@ -91,8 +91,7 @@ const Index = () => {
               </div>
               
               <h3 className="text-white text-lg leading-normal my-4 text-center">
-                Reserve a seat by <span className="text-orange-500 font-bold">June 1, 2025</span> to unlock<br />
-                <span className="font-medium">Bonuses worth Rs. 18,000</span>
+                Reserve a seat by <span className="text-orange-500 font-bold">June 10, 2025</span>
               </h3>
               
               <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full py-6 rounded-2xl text-xl font-medium">
