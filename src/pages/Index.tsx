@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/CountdownTimer";
@@ -9,32 +9,101 @@ import TestimonialGrid from "@/components/TestimonialGrid";
 import AsSeenIn from "@/components/AsSeenIn";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+// Dynamic date hook - calculates next 10th of the month
+const useDynamicDate = () => {
+  const [dynamicDate, setDynamicDate] = useState('');
+
+  useEffect(() => {
+    const getNext10thDate = () => {
+      const now = new Date();
+      const currentMonth = now.getMonth();
+      const currentYear = now.getFullYear();
+      const currentDay = now.getDate();
+      
+      let targetMonth = currentMonth;
+      let targetYear = currentYear;
+      
+      // If current date is past the 10th, move to next month
+      if (currentDay > 10) {
+        targetMonth += 1;
+        if (targetMonth > 11) {
+          targetMonth = 0;
+          targetYear += 1;
+        }
+      }
+      
+      const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      
+      return `${months[targetMonth]} 10, ${targetYear}`;
+    };
+
+    setDynamicDate(getNext10thDate());
+  }, []);
+
+  return dynamicDate;
+};
+
+const NotificationBar = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="w-full overflow-hidden bg-[#fdb602] py-2.5 relative border-t-2 border-b-2 border-black">
+      <div
+        className="inline-block whitespace-nowrap text-black text-lg font-bold"
+        style={{
+          paddingLeft: '100%',
+          animation: 'scroll-left 12s linear infinite',
+        }}
+      >
+        On a mission to help 100000 people from the rural areas to speak English Confidently and smartly
+      </div>
+
+      <style>
+        {`
+          @keyframes scroll-left {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+const Index = () => {
+  const dynamicDate = useDynamicDate();
+
+  return (
+  <div className="min-h-screen bg-black text-white">
     {/* Header */}
     <header className="flex items-center justify-between p-6 pb-4 border-b border-gray-800">
-      <div className="flex items-center">
-        <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden">
-          <img 
-            src="/lovable-uploads/8169f376-7ae0-4490-a86c-2c09c3a37911.png" 
-            alt="Speak Smart Logo" 
-            className="w-full h-full object-contain"
-          />
+        <div className="flex items-center">
+          <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden">
+            <img 
+              src="/lovable-uploads/8169f376-7ae0-4490-a86c-2c09c3a37911.png" 
+              alt="Speak Smart Logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
-      </div>
-  
-  <div className="flex flex-col items-center space-y-1 md:space-y-2">
-    <Button
-      className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base"
-      onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}
-    >
-      Pay Now
-    </Button>
-    <span className="text-white text-xs md:text-sm">पे करा आणि कोर्स सुरु करा</span>
-  </div>
-</header>
+    
+        <div className="flex flex-col items-center space-y-1 md:space-y-2">
+          <Button
+            className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base"
+            onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}
+          >
+            Pay Now
+          </Button>
+          <span className="text-white text-xs md:text-sm">पे करा आणि कोर्स सुरु करा</span>
+        </div>
+    </header>
 
+    <NotificationBar />
 
       {/* Hero Section */}
       <section className="px-6 py-8 text-center">
@@ -61,7 +130,7 @@ const Index = () => {
         {/* Banner Image */}
         <div className="w-full max-w-4xl mx-auto mb-4">
           <img 
-            src="/lovable-uploads/51ba5420-dd25-49a5-b14e-2b9aa49241e6.png" 
+            src="/lovable-uploads/banner.jpeg" 
             alt="Speak Smart Banner" 
             className="w-full h-auto rounded-xl object-cover scale-105"
           />
@@ -92,7 +161,7 @@ const Index = () => {
               </div>
               
               <h3 className="text-white text-lg leading-normal my-4 text-center">
-                Reserve a seat by <span className="text-orange-500 font-bold">June 10, 2025</span>
+                Reserve a seat by <span className="text-orange-500 font-bold">{dynamicDate}</span>
               </h3>
               
               <Button 
@@ -123,11 +192,11 @@ const Index = () => {
             </p>
 
             <p className="text-base md:text-lg text-black leading-relaxed text-justify mt-6">
-              "Speak Smart" हा Level 1 English Communication Certification कोर्स आहे, ज्यात ३ महिन्यांच्या कालावधीत ३६ Video Lectures, ३६ PDF Assignments, Weekly Live Doubts Solving आणि Lifetime Access उपलब्ध आहे; ग्रामीण विद्यार्थ्यांच्या गरजा लक्षात घेऊन सोपी भाषा व practical life situations मध्ये उपयुक्त अशा पद्धतीने हा कोर्स डिझाइन करण्यात आला आहे.
+              "Speak Smart" हा Level 1 English Communication Certification कोर्स आहे, ज्यात ३ महिन्यांच्या कालावधीत ३६ Video Lectures, ३६ PDF Assignments, Weekly Live Doubts Solving आणि Lifetime Access उपलब्ध आहे; ग्रामीण विद्यार्थ्यांच्या कालावधीत सोपी भाषा व practical life situations मध्ये उपयुक्त अशा पद्धतीने हा कोर्स डिझाइन करण्यात आला आहे.
             </p>
 
             <p className="text-base md:text-lg text-black leading-relaxed text-justify mt-6">
-              “One House, One Course” संकल्पनेतून हा कोर्स संपूर्ण कुटुंबासाठी लाभदायी ठरतो, प्रत्येक दिवशी तुमच्या इंग्रजी बोलण्याचा आत्मविश्वास वाढवतो आणि तीन महिन्यांत प्रभावशाली इंग्रजी बोलण्याची ताकद देतो.
+              "One House, One Course" संकल्पनेतून हा कोर्स संपूर्ण कुटुंबासाठी लाभदायी ठरतो, प्रत्येक दिवशी तुमच्या इंग्रजी बोलण्याचा आत्मविश्वास वाढवतो आणि तीन महिन्यांत प्रभावशाली इंग्रजी बोलण्याची ताकद देतो.
             </p>
           </div>
         </div>
