@@ -49,7 +49,7 @@ const Index = () => {
         </h3>
 
         {/* 5 Star Reviews Badge */}
-        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-4">
+        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-6">
           <span className="text-white font-medium">५ स्टार Reviews</span>
           <div className="flex space-x-1">
             {[...Array(5)].map((_, i) => (
@@ -59,11 +59,11 @@ const Index = () => {
         </div>
 
         {/* Banner Image */}
-        <div className="w-full max-w-4xl mx-auto mt-6 mb-4">
+        <div className="w-full max-w-4xl mx-auto mb-8">
           <img 
             src="/lovable-uploads/51ba5420-dd25-49a5-b14e-2b9aa49241e6.png" 
             alt="Speak Smart Banner" 
-            className="w-full h-auto rounded-xl object-cover"
+            className="w-full h-auto rounded-xl object-cover scale-105"
           />
         </div>
       </section>

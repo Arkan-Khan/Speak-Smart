@@ -20,23 +20,25 @@ const FeatureGrid = () => {
         ))}
       </div>
       
-      <div className="flex items-center mt-6 px-2">
-        <div className="flex-shrink-0 -mb-5 -ml-16">
-          <img 
-            src="/lovable-uploads/01d70fc5-289f-47c6-ba99-a5c6094395a3.png" 
-            alt="Reshma Dabholkar Damari" 
-            className="rounded w-[280px] object-cover"
-          />
+      <div className="flex flex-col items-center mt-6 text-center">
+        <div className="mb-4">
+          <div className="w-32 h-32 rounded-full border-4 border-white overflow-hidden mx-auto">
+            <img 
+              src="/lovable-uploads/01d70fc5-289f-47c6-ba99-a5c6094395a3.png" 
+              alt="Reshma Dabholkar Damari" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
         
-        <div className="max-w-[300px] flex flex-col items-start justify-start leading-6 gap-4 pl-2 pr-1">
+        <div className="flex flex-col items-center justify-center leading-6 gap-4">
           <div className="bg-orange-500 px-4 py-2 text-sm rounded-xl text-white font-semibold">
             Your Trainer
           </div>
           <h3 className="sm:text-2xl text-base text-white font-semibold">
             Reshma Dabholkar Damari
           </h3>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
             इंग्रजी भाषा अगदी सहज सोप्या पद्धतीने शिकवणारी आणि आत्मविश्वास वाढवणारी अनुभवी प्रशिक्षक
           </p>
         </div>
