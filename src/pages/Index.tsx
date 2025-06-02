@@ -56,7 +56,7 @@ const NotificationBar = () => {
           animation: 'scroll-left 12s linear infinite',
         }}
       >
-        On a mission to help 100000 people from the rural areas to speak English Confidently and smartly
+        On a mission to help 100,000 people from rural areas speak English confidently and fluently.
       </div>
 
       <style>
