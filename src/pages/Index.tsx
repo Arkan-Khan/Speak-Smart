@@ -27,11 +27,11 @@ const Index = () => {
         </div>
         
         <div className="flex space-x-2 md:space-x-4">
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base">
+          <Button
+            className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base"
+            onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}
+          >
             Enroll Now
-          </Button>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base">
-            Login
           </Button>
         </div>
       </header>
@@ -79,14 +79,14 @@ const Index = () => {
             
             {/* Mobile: Features Second, Desktop: Video Second */}
             <div className="md:order-2 order-1 flex flex-col items-center justify-between rounded-lg">
-              <div className="w-full p-4 bg-[#222] shadow-md rounded-xl mb-4">
+              <div className="w-full p-1 bg-white shadow-md rounded-xl mb-4">
                 <div className="relative bg-gray-800 rounded-lg overflow-hidden aspect-video">
                   <iframe
-                    src="https://drive.google.com/file/d/1iI1D2yBvxNJ2JBQtu8dqH0p267PxqUpg/preview?usp=sharing&rm=minimal&embedded=true"
+                    src="https://www.youtube.com/embed/FlBg_sp749I"
                     className="w-full h-full"
-                    allow="autoplay"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
                     title="Introduction Video"
-                    style={{ pointerEvents: 'auto' }}
                   ></iframe>
                 </div>
               </div>
@@ -95,7 +95,9 @@ const Index = () => {
                 Reserve a seat by <span className="text-orange-500 font-bold">June 10, 2025</span>
               </h3>
               
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full py-6 rounded-2xl text-xl font-medium">
+              <Button 
+              className="bg-orange-500 hover:bg-orange-600 text-white w-full py-6 rounded-2xl text-xl font-medium"
+              onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}>
                 Reserve Seat for ₹999 <span className="line-through text-sm ml-2">₹2500</span>
               </Button>
             </div>
@@ -130,7 +132,9 @@ const Index = () => {
 
           <CountdownTimer />
           
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 rounded-2xl text-2xl font-bold mt-8 transform hover:scale-105 transition-transform">
+          <Button 
+          className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 rounded-2xl text-2xl font-bold mt-8 transform hover:scale-105 transition-transform"
+          onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}>
             Enroll Now
           </Button>
         </div>
