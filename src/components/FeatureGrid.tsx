@@ -1,9 +1,9 @@
 
-import { Check, Users, Brain, Clock, Video, Award } from "lucide-react";
+import { Check, Users, Brain, Clock, Video, Award, HeadphonesIcon } from "lucide-react";
 
 const FeatureGrid = () => {
   const features = [
-    { icon: Video, text: "Demo Session 1" },
+    { icon: HeadphonesIcon, text: "Weekly Live Support" },
     { icon: Video, text: "36 Videos" },
     { icon: Award, text: "36 Assignments" },
     { icon: Clock, text: "Life Time Access" }
@@ -22,20 +22,24 @@ const FeatureGrid = () => {
       
       <div className="flex items-center mt-6">
         <div className="flex-shrink-0 mr-6">
-          <div className="w-24 h-24 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-2xl">AR</span>
+          <div className="w-24 h-24 rounded-full overflow-hidden">
+            <img 
+              src="/lovable-uploads/01d70fc5-289f-47c6-ba99-a5c6094395a3.png" 
+              alt="Reshma Dabholkar Damari" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
         
         <div className="flex flex-col items-start justify-start leading-6 gap-4">
           <div className="bg-orange-500 px-4 py-2 text-sm rounded-xl text-white font-semibold">
-            Your Teacher
+            Your Trainer
           </div>
           <h3 className="text-2xl text-white font-semibold">
-            Aleena Rais
+            Reshma Dabholkar Damari
           </h3>
           <p className="text-gray-300 text-sm leading-relaxed">
-            10 वर्षांचा Corporate क्षेत्रात, Mumbai मध्ये, Human Resource Management (HR) मध्ये अनुभव तसेच 9 वर्षांपासून students, teachers, business professionals, working professionals आणि housewives यांना — Spoken English, Confidence Building, Soft Skills आणि Personality Development या areas मध्ये. आजपर्यंत 1000+ students ना train केलं आहे.
+            इंग्रजी भाषा अगदी सहज सोप्या पद्धतीने शिकवणारी आणि आत्मविश्वास वाढवणारी अनुभवी प्रशिक्षक
           </p>
         </div>
       </div>

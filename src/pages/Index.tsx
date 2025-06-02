@@ -38,7 +38,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="px-6 py-8 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight px-4">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight px-4 py-2">
           <span className="text-white block mb-3">ग्रामीण भागातील लोकांसाठी</span>
           <span className="text-orange-500">इंग्रजी बोलायला शिकवणारा एकमेव कोर्स</span>
         </h2>
@@ -49,13 +49,22 @@ const Index = () => {
         </h3>
 
         {/* 5 Star Reviews Badge */}
-        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-8">
+        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-4">
           <span className="text-white font-medium">५ स्टार Reviews</span>
           <div className="flex space-x-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
+        </div>
+
+        {/* Banner Image */}
+        <div className="w-full max-w-4xl mx-auto mb-8">
+          <img 
+            src="/lovable-uploads/51ba5420-dd25-49a5-b14e-2b9aa49241e6.png" 
+            alt="Speak Smart Banner" 
+            className="w-full h-auto rounded-xl"
+          />
         </div>
       </section>
 
@@ -72,14 +81,12 @@ const Index = () => {
             <div className="md:order-2 order-1 flex flex-col items-center justify-between rounded-lg">
               <div className="w-full p-4 bg-[#222] shadow-md rounded-xl mb-4">
                 <div className="relative bg-gray-800 rounded-lg overflow-hidden aspect-video">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-orange-500 rounded-full p-4">
-                      <Play className="w-8 h-8 text-white ml-1" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 px-3 py-1 rounded">
-                    <span className="text-white text-sm">Introduction Video</span>
-                  </div>
+                  <iframe
+                    src="https://drive.google.com/file/d/1iI1D2yBvxNJ2JBQtu8dqH0p267PxqUpg/preview"
+                    className="w-full h-full"
+                    allow="autoplay"
+                    title="Introduction Video"
+                  ></iframe>
                 </div>
               </div>
               
