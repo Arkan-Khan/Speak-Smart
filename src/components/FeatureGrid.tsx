@@ -1,12 +1,12 @@
 
-import { Check, Users, Brain, Clock, Video, Award, HeadphonesIcon } from "lucide-react";
+import { Clock, Video, Award, HeadphonesIcon } from "lucide-react";
 
 const FeatureGrid = () => {
   const features = [
-    { icon: HeadphonesIcon, text: "Weekly Live Support" },
     { icon: Video, text: "36 Video Lectures" },
     { icon: Award, text: "36 Assignments" },
-    { icon: Clock, text: "Life Time Access" }
+    { icon: Clock, text: "Life Time Access" },
+    { icon: HeadphonesIcon, text: "Weekly Live Support" }
   ];
 
   return (

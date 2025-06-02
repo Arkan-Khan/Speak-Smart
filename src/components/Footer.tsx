@@ -1,4 +1,4 @@
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
@@ -62,9 +62,10 @@ const Footer = () => {
   return (
     <footer className="bg-[#222] py-12">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0">
+          
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 order-1 lg:order-1">
             <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden">
               <img 
                 src="/lovable-uploads/8169f376-7ae0-4490-a86c-2c09c3a37911.png" 
@@ -76,7 +77,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 order-2 lg:order-2">
             {socialLinks.map((social, index) => (
               <a 
                 key={index}
@@ -92,14 +93,28 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="flex items-center space-x-2">
-            <Mail className="w-5 h-5 text-gray-300" />
-            <a 
-              href="mailto:speakenglishwithreshmad@gmail.com" 
-              className="text-blue-400 hover:text-blue-300 transition-colors"
-            >
-              speakenglishwithreshmad@gmail.com
-            </a>
+          <div className="flex flex-col items-center space-y-3 order-3 lg:order-3">
+            {/* Email */}
+            <div className="flex items-center space-x-2">
+              <Mail className="w-5 h-5 text-gray-300" />
+              <a 
+                href="mailto:speakenglishwithreshmad@gmail.com" 
+                className="text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
+              >
+                speakenglishwithreshmad@gmail.com
+              </a>
+            </div>
+            
+            {/* Phone Number */}
+            <div className="flex items-center space-x-2">
+              <Phone className="w-6 h-6 text-gray-300" />
+              <a 
+                href="tel:+918600357700" 
+                className="text-green-400 hover:text-green-300 transition-colors text-lg sm:text-xl font-semibold"
+              >
+                +91 8600357700
+              </a>
+            </div>
           </div>
         </div>
 

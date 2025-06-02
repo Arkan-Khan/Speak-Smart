@@ -1,8 +1,6 @@
 
-import { Check, Play, Star, Users, Video, Clock, BookOpen, Award, Heart, TrendingUp } from "lucide-react";
+import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import CountdownTimer from "@/components/CountdownTimer";
 import FeatureGrid from "@/components/FeatureGrid";
 import CourseHighlights from "@/components/CourseHighlights";
@@ -14,27 +12,29 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="flex items-center justify-between p-6 border-b border-gray-800">
-        <div className="flex items-center">
-          <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
-            <img 
-              src="/lovable-uploads/8169f376-7ae0-4490-a86c-2c09c3a37911.png" 
-              alt="Speak Smart Logo" 
-              className="w-full h-full object-contain"
-            />
-          </div>
+    {/* Header */}
+    <header className="flex items-center justify-between p-6 pb-4 border-b border-gray-800">
+      <div className="flex items-center">
+        <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden">
+          <img 
+            src="/lovable-uploads/8169f376-7ae0-4490-a86c-2c09c3a37911.png" 
+            alt="Speak Smart Logo" 
+            className="w-full h-full object-contain"
+          />
         </div>
-        
-        <div className="flex space-x-2 md:space-x-4">
-          <Button
-            className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base"
-            onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}
-          >
-            Enroll Now
-          </Button>
-        </div>
-      </header>
+      </div>
+  
+  <div className="flex flex-col items-center space-y-1 md:space-y-2">
+    <Button
+      className="bg-orange-500 hover:bg-orange-600 text-white px-4 md:px-6 py-2 rounded-lg text-sm md:text-base"
+      onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}
+    >
+      Pay Now
+    </Button>
+    <span className="text-white text-xs md:text-sm">पे करा आणि कोर्स सुरु करा</span>
+  </div>
+</header>
+
 
       {/* Hero Section */}
       <section className="px-6 py-8 text-center">
@@ -49,7 +49,7 @@ const Index = () => {
         </h3>
 
         {/* 5 Star Reviews Badge */}
-        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-6">
+        <div className="inline-flex flex-col items-center space-y-2 bg-[#222] border border-orange-500 px-6 py-4 rounded-xl mb-10">
           <span className="text-white font-medium">५ स्टार Reviews</span>
           <div className="flex space-x-1">
             {[...Array(5)].map((_, i) => (
@@ -59,7 +59,7 @@ const Index = () => {
         </div>
 
         {/* Banner Image */}
-        <div className="w-full max-w-4xl mx-auto mb-8">
+        <div className="w-full max-w-4xl mx-auto mb-4">
           <img 
             src="/lovable-uploads/51ba5420-dd25-49a5-b14e-2b9aa49241e6.png" 
             alt="Speak Smart Banner" 
@@ -78,7 +78,7 @@ const Index = () => {
             </div>
             
             {/* Mobile: Features Second, Desktop: Video Second */}
-            <div className="md:order-2 order-1 flex flex-col items-center justify-between rounded-lg">
+            <div className="md:order-2 order-1 flex flex-col items-center rounded-lg">
               <div className="w-full p-1 bg-white shadow-md rounded-xl mb-4">
                 <div className="relative bg-gray-800 rounded-lg overflow-hidden aspect-video">
                   <iframe
@@ -96,14 +96,43 @@ const Index = () => {
               </h3>
               
               <Button 
-              className="bg-orange-500 hover:bg-orange-600 text-white w-full py-6 rounded-2xl text-xl font-medium"
+              className="bg-orange-500 hover:bg-orange-600 text-white py-6 px-8 rounded-2xl text-xl font-medium"
               onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}>
-                Reserve Seat for ₹999 <span className="line-through text-sm ml-2">₹2500</span>
-              </Button>
+              Reserve Seat for ₹999 <span className="line-through text-sm ml-2">₹2500</span>
+            </Button>
             </div>
           </div>
         </div>
       </section>
+
+      {/*Intro Section */}
+      <section className="px-6 py-12 bg-gray-900">
+        <div className="max-w-6xl mx-auto bg-white rounded-xl">
+          <div className="flex justify-center pt-8 pb-4">
+            <h2 className="bg-orange-500 text-white px-8 py-3 rounded-xl text-xl md:text-2xl font-bold shadow-lg">
+              Introduction
+            </h2>
+          </div>
+
+          <div
+            className="px-6 md:px-8 pb-8"
+            style={{ fontFamily: "'Noto Sans Devanagari', 'Mukta', 'Lohit Devanagari', sans-serif" }}
+          >
+            <p className="text-base md:text-lg text-black leading-relaxed text-justify">
+              10 वर्षांचा Corporate क्षेत्रात, Mumbai मध्ये Human Resource Management (HR) मध्ये अनुभव असून, मागील 9 वर्षांपासून students, teachers, business professionals, working professionals आणि housewives यांना Spoken English, Confidence Building, Soft Skills आणि Personality Development या areas मध्ये train करत आहे; आजपर्यंत 1000+ students ना train केलं आहे आणि 150+ workshops आणि seminars घेतले आहेत.
+            </p>
+
+            <p className="text-base md:text-lg text-black leading-relaxed text-justify mt-6">
+              "Speak Smart" हा Level 1 English Communication Certification कोर्स आहे, ज्यात ३ महिन्यांच्या कालावधीत ३६ Video Lectures, ३६ PDF Assignments, Weekly Live Doubts Solving आणि Lifetime Access उपलब्ध आहे; ग्रामीण विद्यार्थ्यांच्या गरजा लक्षात घेऊन सोपी भाषा व practical life situations मध्ये उपयुक्त अशा पद्धतीने हा कोर्स डिझाइन करण्यात आला आहे.
+            </p>
+
+            <p className="text-base md:text-lg text-black leading-relaxed text-justify mt-6">
+              “One House, One Course” संकल्पनेतून हा कोर्स संपूर्ण कुटुंबासाठी लाभदायी ठरतो, प्रत्येक दिवशी तुमच्या इंग्रजी बोलण्याचा आत्मविश्वास वाढवतो आणि तीन महिन्यांत प्रभावशाली इंग्रजी बोलण्याची ताकद देतो.
+            </p>
+          </div>
+        </div>
+      </section>
+
 
       {/* As Seen In Section */}
       <AsSeenIn />
@@ -120,24 +149,28 @@ const Index = () => {
       {/* Final CTA Section */}
       <section className="px-6 py-16 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">
-            <span className="text-white">Join Now</span><br />
-            <span className="text-orange-500">60% Discount</span>
-          </h2>
-          
-          <div className="flex items-center justify-center space-x-4 mb-8">
-            <span className="text-4xl font-bold text-red-500 line-through">₹2500</span>
-            <span className="text-5xl font-bold text-orange-500">₹999</span>
-          </div>
+  <h2 className="text-3xl md:text-5xl font-bold mb-8">
+    <span className="text-white">Join Now</span><br />
+    <span className="text-orange-500">60% Discount</span>
+  </h2>
+  
+  <div className="flex items-center justify-center space-x-4 mb-8">
+    <span className="text-4xl font-bold text-red-500 line-through">₹2500</span>
+    <span className="text-5xl font-bold text-orange-500">₹999</span>
+  </div>
 
-          <CountdownTimer />
-          
-          <Button 
-          className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 rounded-2xl text-2xl font-bold mt-8 transform hover:scale-105 transition-transform"
-          onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}>
-            Enroll Now
-          </Button>
-        </div>
+  <CountdownTimer />
+  
+  <Button 
+    className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 rounded-2xl text-2xl font-bold mt-8 transform hover:scale-105 transition-transform"
+    onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}
+  >
+    Pay Now
+  </Button>
+
+  <span className="block mt-4 text-lg text-white">पे करा आणि कोर्स सुरु करा</span>
+</div>
+
       </section>
 
       {/* Footer */}
