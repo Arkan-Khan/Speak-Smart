@@ -11,7 +11,7 @@ const FeatureGrid = () => {
 
   return (
     <div className="bg-[#222] rounded-2xl overflow-hidden p-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 gap-2 mb-6">
         {features.map((feature, index) => (
           <div key={index} className="bg-white text-black rounded-xl flex p-3 h-full items-center">
             <feature.icon className="text-orange-500 w-6 h-6 flex-shrink-0 mr-3" />
@@ -24,7 +24,7 @@ const FeatureGrid = () => {
         <div className="mb-4">
           <div className="w-32 h-32 rounded-full border-4 border-white overflow-hidden mx-auto">
             <img 
-              src="/lovable-uploads/01d70fc5-289f-47c6-ba99-a5c6094395a3.png" 
+              src="/lovable-uploads/868ad4c4-8f79-4fc2-9ac2-db6aeab5748d.png" 
               alt="Reshma Dabholkar Damari" 
               className="w-full h-full object-cover"
             />

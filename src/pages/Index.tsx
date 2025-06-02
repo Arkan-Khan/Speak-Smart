@@ -82,10 +82,11 @@ const Index = () => {
               <div className="w-full p-4 bg-[#222] shadow-md rounded-xl mb-4">
                 <div className="relative bg-gray-800 rounded-lg overflow-hidden aspect-video">
                   <iframe
-                    src="https://drive.google.com/file/d/1iI1D2yBvxNJ2JBQtu8dqH0p267PxqUpg/preview"
+                    src="https://drive.google.com/file/d/1iI1D2yBvxNJ2JBQtu8dqH0p267PxqUpg/preview?usp=sharing&rm=minimal&embedded=true"
                     className="w-full h-full"
                     allow="autoplay"
                     title="Introduction Video"
+                    style={{ pointerEvents: 'auto' }}
                   ></iframe>
                 </div>
               </div>
