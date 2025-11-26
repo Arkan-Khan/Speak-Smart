@@ -167,7 +167,7 @@ const Index = () => {
               <Button 
               className="bg-orange-500 hover:bg-orange-600 text-white py-6 px-8 rounded-2xl text-xl font-medium"
               onClick={() => window.location.href = 'https://rzp.io/rzp/sXXSw8Oq'}>
-              Reserve Seat for ₹999 <span className="line-through text-sm ml-2">₹2500</span>
+              Reserve Seat for ₹3500 <span className="line-through text-sm ml-2">₹7000</span>
             </Button>
             </div>
           </div>
@@ -224,8 +224,8 @@ const Index = () => {
   </h2>
   
   <div className="flex items-center justify-center space-x-4 mb-8">
-    <span className="text-4xl font-bold text-red-500 line-through">₹2500</span>
-    <span className="text-5xl font-bold text-orange-500">₹999</span>
+    <span className="text-4xl font-bold text-red-500 line-through">₹7000</span>
+    <span className="text-5xl font-bold text-orange-500">₹3500</span>
   </div>
 
   <CountdownTimer />

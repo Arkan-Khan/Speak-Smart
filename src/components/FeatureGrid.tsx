@@ -5,7 +5,7 @@ const FeatureGrid = () => {
   const features = [
     { icon: Video, text: "36 Video Lectures" },
     { icon: Award, text: "36 Assignments" },
-    { icon: Clock, text: "Life Time Access" },
+    { icon: Clock, text: "1 Year Access" },
     { icon: HeadphonesIcon, text: "Weekly Live Support" }
   ];
 
